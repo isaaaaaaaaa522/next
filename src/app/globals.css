@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*CSS Nativo*/
+.sweet__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, auto);
+  gap: 10px;
+  height: calc(100vw - 7rem);
+}
+
+.sweet__container__item {
+  background-color: lightgray;
+  padding: 20px;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.sweet__container__item.item--a { grid-column: 1; grid-row: 1; }
+.sweet__container__item.item--b { grid-column: 2; grid-row: 1; }
+.sweet__container__item.item--c { grid-column: 3; grid-row: 1; }
+
+.sweet__container__item.item--d { grid-column: 1 / 3; grid-row: 2; }
+.sweet__container__item.item--e { grid-column: 3; grid-row: 2 / 4; }
+
+.sweet__container__item.item--f { grid-column: 1; grid-row: 3; }
+.sweet__container__item.item--g { grid-column: 2; grid-row: 3; }
+
+.sweet__container__item.item--h { grid-column: 1; grid-row: 4; }
+.sweet__container__item.item--i { grid-column: 2 / 4; grid-row: 4; }
+
+/*Tailwind*/
+.item {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*Ambos*/
+.item--a { background-image: url('http://localhost:3000/img/img1.jpg'); }
+.item--b { background-image: url('http://localhost:3000/img/img2.jpg'); }
+.item--c { background-image: url('http://localhost:3000/img/img3.jpg'); }
+.item--d { background-image: url('http://localhost:3000/img/img4.jpg'); }
+.item--e { background-image: url('http://localhost:3000/img/img5.jpg'); }
+.item--f { background-image: url('http://localhost:3000/img/img6.jpg'); }
+.item--g { background-image: url('http://localhost:3000/img/img7.jpg'); }
+.item--h { background-image: url('http://localhost:3000/img/img8.jpg'); }
+.item--i { background-image: url('http://localhost:3000/img/img9.jpg'); }
+
+
+
+
+/*swiper*/
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
